@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: opendnd/balaenae
           tags: latest 
-          tag_with_ref: false
+          tag_with_ref: true
