@@ -1,0 +1,10 @@
+docker build -t opendnd/cli ../docker/opendnd-cli
+cp ../api/v1/index.js ../docker/opendnd-web/
+cp ../api/v1/package-lock.json ../docker/opendnd-web/
+cp ../api/v1/package.json ../docker/opendnd-web/
+docker build -t opendnd/web ../docker/opendnd-web
+
+docker push opendnd/cli
+docker push opendnd/web
+
+echo "Successfully pushed"
